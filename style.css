@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #111111;
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  border: 1px solid #cccccc;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+}
+
+section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+}
+
+/* Color section styling */
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.color-card {
+  flex: 1 1 calc(33.333% - 20px); /* This ensures 3 cards per row across standard screens */
+  min-width: 250px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #111111;
+}
+
+/* Specific background color classes for the Color Section */
+
+.cool-blue {
+  background-color: #2d5dcc;
+  color: #ffffff; /* Whitens text on dark blue background for contrast */
+}
+
+.pink {
+  background-color: #d957d9;
+}
+
+.mint-green {
+  background-color: #4fe0b0;
+}
+
+.beige {
+  background-color: #efd9ca;
+}
+
+.color-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.color-card p {
+  font-size: 14px;
+}
+
+/* FONT SECTION STYLING */
+
+/* Creates a fide-by-side layout for the font cards */
+.font-layout {
+  display: flex;
+  gap: 40px;
+}
+
+.font-column-left, 
+.font-column-right {
+  flex: 1; /* Splits the space equally into a 2-column layout */
+}
+
+.font-block {
+  margin-bottom: 30px;
+}
+
+.font-block h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-decoration: underline;
+}
+
+.font-block p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.color-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+.font-block:hover {
+  background-color: #f5f5f5;
+  transition: background 0.2s;
+}
+
+
+/* Styling for the font section */
+.source-code {
+  font-family: 'Source Code Pro', Courier, monospace;
+}
+
+.poppins {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
+
+.nunito {
+  font-family: 'Nunito Sans', Geneva, Tahoma, sans-serif;
+}
+
+.regular { font-weight: 400; font-style: normal; }
+.bold { font-weight: 700; font-style: normal; }
+.italic { font-weight: 400; font-style: italic; }
+
+.textstyle-row {
+    
+    justify-content: space-between; /* Pushes example to the left, specs to the right */
+    align-items: center; /* Centers them vertically relative to each other */
+    padding: 30px 0;
+    border-bottom: 1px solid #eeeeee;
+    gap: 20px;
+}
+
+.textstyle-specs {
+  flex: 1;
+}
+
+/* 5. Clean up the bullet points to make it look professional */
+.textstyle-specs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Keeps the text aligned clean within its box */
+}
+
+.textstyle-specs li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+@media (max-width: 768px) {
+  .color-palette,
+  .font-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .color-card {
+    min-width: 100%;
+  }
+  .container {
+    padding: 10px;
+  }
+}
